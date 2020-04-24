@@ -55,5 +55,23 @@ public class StringUtils {
 		String ming = randomChineseString(RandomUtils.random(1, 2));
 		return xing+ming;
 	}
+	//判断数字
+	public static boolean isNumber(String src) {
+		String reg="^(-)?[0-9]+(\\.[0-9]+)?$";
+		
+		return src.matches(reg);
+	}
+	//判断是否是手机号
+	public static boolean isPhone(String src) {
+		String reg="^1[3|4|5|7|8]\\d{9}$";
+		
+		return src.matches(reg);
+	}
+	//判断是否为邮箱
+	public static boolean isEmail(String src) {
+		String reg="^\\w+\\@\\w+\\.\\w+$";
+		
+		return src.matches(reg);
+	}
 
 }
